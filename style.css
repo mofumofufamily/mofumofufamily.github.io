@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Nunito',sans-serif;
+
+    background:#FFF8F2;
+
+    color:#444;
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:40px 20px;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:700px;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.cat{
+
+    font-size:70px;
+
+    animation:bounce 2s infinite;
+
+}
+
+h1{
+
+    font-size:3rem;
+
+    margin-top:10px;
+
+}
+
+p{
+
+    margin-top:10px;
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+.buttons a{
+
+    text-decoration:none;
+
+    background:#F6A85A;
+
+    color:white;
+
+    padding:14px 24px;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    transition:.2s;
+
+}
+
+.buttons a:hover{
+
+    transform:translateY(-3px);
+
+}
+
+section{
+
+    margin-bottom:30px;
+
+}
+
+h2{
+
+    margin-bottom:15px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
