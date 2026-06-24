@@ -1,77 +1,113 @@
+/* ===================================
+   MofuMofuFamily Website
+=================================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
-    font-family:'Nunito',sans-serif;
+    font-family:"Nunito",sans-serif;
 
-    background:#FFF8F2;
+    color:#3f3f3f;
 
-    color:#444;
-
-    display:flex;
-
-    justify-content:center;
-
-    padding:40px 20px;
+    background:linear-gradient(
+        180deg,
+        #FFFDFB 0%,
+        #FFF7F0 45%,
+        #FFF2E6 100%
+    );
 
 }
+
+/* ================================
+   HERO
+================================ */
+
+.hero{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    background:#f6f3f3;
+    overflow:hidden;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-1px;
+    height:220px;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(255,255,255,0) 0%,
+        rgba(255,253,251,.05) 20%,
+        rgba(255,253,251,.25) 40%,
+        rgba(255,253,251,.65) 70%,
+        #FFFDFB 100%
+    );
+}
+
+.hero-banner{
+    width:100%;
+    max-width:2048px;
+    display:block;
+}
+/* ================================
+   CONTAINER
+================================ */
 
 .container{
 
-    width:100%;
-    max-width:700px;
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:70px 25px;
 
 }
 
-.hero{
+/* ================================
+   HEADINGS
+================================ */
+
+h2{
+
+    font-family:"Fredoka",sans-serif;
+
+    font-size:2rem;
 
     text-align:center;
 
-    margin-bottom:40px;
+    margin-bottom:35px;
+
+    color:#444;
 
 }
 
-.cat{
-
-    font-size:70px;
-
-    animation:bounce 2s infinite;
-
-}
-
-h1{
-
-    font-size:3rem;
-
-    margin-top:10px;
-
-}
-
-p{
-
-    margin-top:10px;
-
-    color:#666;
-
-    line-height:1.6;
-
-}
+/* ================================
+   SOCIAL BUTTONS
+================================ */
 
 .buttons{
 
-    display:flex;
+    display:grid;
 
-    gap:15px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    justify-content:center;
+    gap:20px;
 
-    flex-wrap:wrap;
-
-    margin-bottom:50px;
+    margin-bottom:70px;
 
 }
 
@@ -79,63 +115,237 @@ p{
 
     text-decoration:none;
 
-    background:#F6A85A;
-
     color:white;
 
-    padding:14px 24px;
+    padding:18px;
 
-    border-radius:999px;
+    border-radius:18px;
 
-    font-weight:bold;
+    text-align:center;
 
-    transition:.2s;
+    font-weight:700;
+
+    font-size:1.05rem;
+
+    transition:.25s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 
 }
 
 .buttons a:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-6px) scale(1.03);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
 
 }
 
-section{
+/* Platform Colors */
 
-    margin-bottom:30px;
+.buttons a:nth-child(1){
+
+    background:#E4405F;
+
+}
+
+.buttons a:nth-child(2){
+
+    background:#000000;
 
 }
 
-h2{
+.buttons a:nth-child(3){
 
-    margin-bottom:15px;
+    background:#FF0000;
 
 }
+
+.buttons a:nth-child(4){
+
+    background:#101010;
+
+}
+
+.buttons a:nth-child(5){
+
+    background:#1877F2;
+
+}
+
+.buttons a:nth-child(6){
+
+    background:#BD081C;
+
+}
+
+.buttons a:nth-child(7){
+
+    background:#111111;
+
+}
+
+.buttons a:nth-child(8){
+
+    background:#FFD54F;
+
+    color:#5B4200;
+
+}
+
+/* ================================
+   CARD
+================================ */
 
 .card{
 
     background:white;
 
-    border-radius:20px;
+    border-radius:28px;
 
     padding:40px;
 
-    text-align:center;
+    margin-bottom:45px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
 
 }
 
-@keyframes bounce{
+.card p{
 
-    0%,100%{
+    margin-top:18px;
 
-        transform:translateY(0);
+    line-height:1.8;
+
+    color:#666;
+
+}
+
+/* ================================
+   SUPPORT
+================================ */
+
+.support{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+}
+
+.support p{
+
+    margin:20px 0 35px;
+
+    color:#666;
+
+}
+
+.coffee.big{
+
+    display:inline-block;
+
+    background:#FFD54F;
+
+    color:#5B4200;
+
+    text-decoration:none;
+
+    padding:18px 42px;
+
+    border-radius:999px;
+
+    font-size:1.1rem;
+
+    font-weight:700;
+
+    transition:.25s;
+
+    box-shadow:0 10px 25px rgba(255,213,79,.35);
+
+}
+
+.coffee.big:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(255,213,79,.45);
+
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer{
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    color:#777;
+
+}
+
+footer p{
+
+    margin:10px 0;
+
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:768px){
+
+    .hero::after{
+
+        height:120px;
 
     }
 
-    50%{
+    .container{
 
-        transform:translateY(-10px);
+        padding:45px 18px;
+
+    }
+
+    h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .buttons{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .buttons a{
+
+        font-size:1rem;
+
+        padding:16px;
+
+    }
+
+    .card{
+
+        padding:28px;
+
+    }
+
+    .support{
+
+        padding:35px 25px;
 
     }
 
